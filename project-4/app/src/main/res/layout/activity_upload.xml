@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:text="Share pictures"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/galleryButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/postButton"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="13dp"
+            android:text="Select image to Upload" />
+
+        <ImageView
+            android:id="@+id/uploadedImage"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_below="@+id/galleryButton"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/uploadedImage"
+            android:layout_alignEnd="@+id/uploadedImage"
+            android:layout_below="@+id/uploadedImage"
+            android:ems="10"
+            android:hint="Description"
+            android:inputType="textMultiLine" />
+
+        <RadioButton
+            android:id="@+id/makePrivateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/uploadedImage"
+            android:layout_below="@+id/description"
+            android:layout_marginTop="8dp"
+            android:text="Make private" />
+
+        <Button
+            android:id="@+id/postButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/makePrivateButton"
+            android:layout_toEndOf="@+id/textView"
+            android:layout_below="@+id/description"
+            android:text="Post" />
+
+        <include layout="@layout/layout_bottom_navigation_view"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
